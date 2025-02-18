@@ -24,6 +24,9 @@ public class TransactionService {
         this.transactionList.clear();
     }
 
+    public List<Transaction> getAllTransactions() {
+        return this.transactionList;
+    }
 
     public List<Transaction> getTransactionsInLastSeconds(long seconds) {
         ZonedDateTime cutoffTime = ZonedDateTime.now().minusSeconds(seconds);

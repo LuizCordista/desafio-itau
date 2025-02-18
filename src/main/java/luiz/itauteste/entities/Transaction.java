@@ -33,4 +33,5 @@ public class Transaction {
         this.value = value;
         this.time = time;
     }
+
 }

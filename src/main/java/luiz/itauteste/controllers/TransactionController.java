@@ -37,6 +37,6 @@ public class TransactionController {
 
     @GetMapping("/estatistica")
     public ResponseEntity<StatsTransactionDTO> getStatsByLastMinute() {
-        return ResponseEntity.ok(transactionService.getTransactionsStatsInLastSeconds(6000000));
+        return ResponseEntity.ok(transactionService.getTransactionsStatsInLastSeconds(60));
     }
 }

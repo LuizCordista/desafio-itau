@@ -69,4 +69,15 @@ class TransactionServiceTest {
         assertEquals(100.0, stats.min());
         assertEquals(300.0, stats.max());
     }
+
+    @Test
+    void getTransactionsStatsInLastSeconds_noTransactions() {
+        StatsTransactionDTO stats = transactionService.getTransactionsStatsInLastSeconds(60);
+
+        assertEquals(0, stats.count());
+        assertEquals(0.0, stats.sum());
+        assertEquals(0.0, stats.avg());
+        assertEquals(0.0, stats.min());
+        assertEquals(0.0, stats.max());
+    }
 }
